@@ -1,8 +1,16 @@
 # dotvim
-cd ~
-git clone https://github.com/MatTaylorSharrow/dotvim.git .vim
+
+Instructions on setting up .vim
+
+    $ cd ~
+    $ git clone https://github.com/MatTaylorSharrow/dotvim.git .vim
+
 Launch Gvim
-gvim
+
+    $ gvim
+
 In Gvim run the command
-:PluginInstall
+
+    :PluginInstall
+
 Restart Gvim
