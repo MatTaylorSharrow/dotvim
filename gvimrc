@@ -18,7 +18,7 @@ Plugin 'ScrollColors'
 "Plugin 'felixhummel/setcolors.vim'
 Plugin 'jamessan/vim-gnupg'
 Plugin 'yokomizor/LocateOpen'
-Plugin 'fholgado/minibufexpl.vim'
+"Plugin 'fholgado/minibufexpl.vim'
 Plugin 'shemerey/vim-project'
 Plugin 'ervandew/supertab'
 Plugin 'taglist.vim'
@@ -170,7 +170,7 @@ map      <silent> <F4>        :NEXTCOLOR<cr>
 map      <silent> <S-F4>      :PREVCOLOR<cr>
 
 map      <silent> <F6>        :NERDTreeToggle<CR>
-map      <silent> <S-F6>      :MBEToggle<CR>
+"map      <silent> <S-F6>      :MBEToggle<CR>
 map      <silent> <F7>        :copen<CR>
 map      <silent> <S-F7>      :cclose<CR>
 map      <silent> <F8>        :cn<CR>
@@ -180,7 +180,7 @@ nmap     <silent> <S-F11>     :exe ":ptag ".expand("<cword>")<CR>
 map      <silent> <F12>       :write<CR>
 
 imap     <silent> <F6>        <Esc>:NERDTreeToggle<CR>
-map      <silent> <S-F6>      <Esc>:MBEToggle<CR>
+"map      <silent> <S-F6>      <Esc>:MBEToggle<CR>
 imap     <silent> <F7>        <Esc>:copen<CR>
 imap     <silent> <S-F7>      <Esc>:cclose<CR>
 imap     <silent> <F8>        <Esc>:cn<CR>
@@ -233,16 +233,22 @@ imap	<RightMouse> <ESC>
 "-------------------------------------------------------------------------------
 " MiniBufferExplorer key mapping(s))
 "-------------------------------------------------------------------------------
-map <Leader>f :MBEFocus<cr>
+"map <Leader>f :MBEFocus<cr>
 "-------------------------------------------------------------------------------
+
+
 
 "
 "  PLUGIN SETTINGS 
 "
 
+
+" a.vim settings - Alternate between source and header files
+let g:alternateNoDefaultAlternate = 1
+
 " c.vim c-support settings
 "g:C_GlobalTemplateFile     plugin_dir.'c-support/templates/Templates'
-"g:C_LocalTemplateFile      $HOME.'/.vim/c-support/templates/Templates'
+let g:C_LocalTemplateFile      $HOME.'/.vim/c-support/templates/Templates'
 "g:C_TemplateOverwrittenMsg 'yes'
 "g:C_Ctrl_j                 'on'
 "
@@ -292,10 +298,10 @@ let g:locateopen_exactly = 0
 
 
 " MiniBufExpl settings
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
+"let g:miniBufExplMapWindowNavVim = 1
+"let g:miniBufExplMapWindowNavArrows = 1
+"let g:miniBufExplMapCTabSwitchBufs = 1
+"let g:miniBufExplModSelTarget = 1
 
 " SuperTab settings
 let g:SuperTabDefaultCompletionType = "<c-n>"
